@@ -1,0 +1,92 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.searchWrap {
+    position: relative;
+    flex: 1;
+    max-width: 340px;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 0.7rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-dim);
+    pointer-events: none;
+}
+
+.searchInput {
+    padding-left: 2.1rem !important;
+    font-size: 0.875rem;
+    height: 36px;
+}
+
+.priorityFilters {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.filterChip {
+    padding: 0.3rem 0.7rem;
+    border-radius: 99px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    transition: all var(--transition);
+}
+
+.filterChip:hover {
+    background: var(--surface2);
+}
+
+.filterActive {
+    background: var(--surface2);
+    border-color: var(--accent);
+    color: var(--text);
+}
+
+.syncBadge {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 0.25rem 0.65rem;
+    border-radius: 99px;
+}
+
+.syncConnected {
+    background: rgba(76, 175, 80, 0.12);
+    color: #4CAF50;
+    border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.syncDisconnected {
+    background: rgba(255, 76, 76, 0.1);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+}
