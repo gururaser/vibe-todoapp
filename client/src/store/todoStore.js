@@ -136,8 +136,10 @@ const useTodoStore = create((set, get) => ({
     },
 
     createCategory: async (payload) => {
+        // Do NOT push to state here.
+        // The server emits a 'category:created' socket event which adds it
+        // via applySocketEvent. Pushing here AND via socket causes duplicates.
         const { data } = await api.post('/categories', payload);
-        set((s) => ({ categories: [...s.categories, data.category] }));
         return data.category;
     },
 
@@ -153,8 +155,10 @@ const useTodoStore = create((set, get) => ({
     },
 
     createTag: async (name) => {
+        // Do NOT push to state here.
+        // The server emits a 'tag:created' socket event which adds it
+        // via applySocketEvent. Pushing here AND via socket causes duplicates.
         const { data } = await api.post('/tags', { name });
-        set((s) => ({ tags: [...s.tags, data.tag] }));
         return data.tag;
     },
 
