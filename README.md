@@ -7,6 +7,7 @@
 ![Stack](https://img.shields.io/badge/PostgreSQL-16-blue?logo=postgresql)
 ![Stack](https://img.shields.io/badge/Socket.io-4-black?logo=socket.io)
 ![Stack](https://img.shields.io/badge/Docker-Compose-blue?logo=docker)
+![App Screenshot](./image.png)
 
 ---
 
